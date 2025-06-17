@@ -1,0 +1,5 @@
+name=input("Hey,what's your first name?")
+print(name)
+lastname=input("What's your lastname")
+print(lastname)
+print(name+lastname)
