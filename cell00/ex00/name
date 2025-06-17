@@ -1,4 +1,3 @@
 ffirt_kitti="wil"
 last_nonponkrang="42"
 whole_name=first_kitti+""+last_nonponkrang
-print(whole_kitti last_nonponkrang)
