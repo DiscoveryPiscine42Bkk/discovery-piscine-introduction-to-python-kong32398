@@ -1,6 +1,3 @@
- # โปรแกรมการจัดการฟาร์มงานนักศึกษา
-# Student Task Farm Management System
-
 def show_menu():
     """แสดงเมนูหลักของโปรแกรม"""
     print("\n" + "="*50)
@@ -88,13 +85,13 @@ def delete_task(task_list):
         print("📋 ยังไม่มีงานในฟาร์ม")
         return
     
-    # แสดงรายการงานปัจจุบัน
+    
     show_all_tasks(task_list)
     
     try:
         task_id = int(input("\nใส่ ID งานที่ต้องการลบ: "))
         
-        # หางานที่ต้องการลบ
+        
         task_to_delete = None
         for task in task_list:
             if task['id'] == task_id:
@@ -105,7 +102,7 @@ def delete_task(task_list):
             task_name = task_to_delete['name']
             task_list.remove(task_to_delete)
             
-            # อัพเดท ID ใหม่
+            
             for i, task in enumerate(task_list):
                 task['id'] = i + 1
                 
@@ -124,19 +121,19 @@ def show_summary(task_list):
         print("📋 ยังไม่มีงานในฟาร์ม")
         return
     
-    # นับจำนวนงานในแต่ละประเภท
+    
     category_count = {}
     priority_count = {'สูง': 0, 'กลาง': 0, 'ต่ำ': 0}
     
     for task in task_list:
-        # นับตามประเภท
+        
         category = task['category']
         if category in category_count:
             category_count[category] += 1
         else:
             category_count[category] = 1
         
-        # นับตามความสำคัญ
+        
         priority = task['priority']
         if priority in priority_count:
             priority_count[priority] += 1
@@ -186,9 +183,9 @@ def main():
             print("👋 ลาก่อน!")
             break
         
-        # หยุดรอให้ผู้ใช้กดปุ่มเพื่อดำเนินการต่อ
+        
         input("\nกด Enter เพื่อดำเนินการต่อ...")
 
-# เรียกใช้โปรแกรม
+
 if __name__ == "__main__":
     main()
