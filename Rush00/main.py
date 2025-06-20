@@ -9,7 +9,6 @@ def show_menu():
     print("4. สรุปงานในแต่ละประเภท")
     print("5. ออกจากโปรแกรม")
     print("="*50)
-
 def add_task(task_list):
     """เพิ่มงานใหม่ในฟาร์ม"""
     print("\n--- เพิ่มงานในฟาร์ม ---")
@@ -62,7 +61,6 @@ def add_task(task_list):
     
     task_list.append(task)
     print(f"✅ เพิ่มงาน '{task_name}' เรียบร้อยแล้ว!")
-
 def show_all_tasks(task_list):
     """แสดงรายการงานทั้งหมด"""
     print("\n--- รายการงานทั้งหมด ---")
@@ -76,7 +74,6 @@ def show_all_tasks(task_list):
     
     for task in task_list:
         print(f"{task['id']:<3} {task['name']:<20} {task['category']:<15} {task['priority']:<10} {task['status']}")
-
 def delete_task(task_list):
     """ลบงานออกจากฟาร์ม"""
     print("\n--- ลบงาน ---")
@@ -112,7 +109,6 @@ def delete_task(task_list):
             
     except ValueError:
         print("❌ กรุณาใส่ตัวเลข!")
-
 def show_summary(task_list):
     """สรุปงานในแต่ละประเภท"""
     print("\n--- สรุปงานในแต่ละประเภท ---")
@@ -150,7 +146,6 @@ def show_summary(task_list):
     for priority, count in priority_count.items():
         if count > 0:
             print(f"   {priority}: {count} งาน")
-
 def main():
     """ฟังก์ชันหลักของโปรแกรม"""
     task_list = []
@@ -185,7 +180,5 @@ def main():
         
         
         input("\nกด Enter เพื่อดำเนินการต่อ...")
-
-
 if __name__ == "__main__":
     main()
